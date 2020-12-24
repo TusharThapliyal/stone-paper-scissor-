@@ -1,0 +1,41 @@
+//this code is for stone paper scissor game written java
+
+import java.util.Scanner;
+import java.util.Random;
+class rps{
+	public static void main(String[] arg){
+		System.out.println("press \t1 : Rock \n\t 2 : paper \n\t 3 : scissor");
+		Scanner player=new Scanner(System.in);
+		int a = player.nextInt();
+		Random rand=new Random();
+		int r=rand.nextInt(3);
+		switch(a){
+			case 1:
+					if(r==0)
+					System.out.println("tie");
+					if(r==1)
+					System.out.println("you won");
+					if(r==2)
+					System.out.println("you lost");
+					break;
+			case 2:
+					if(r==1)
+					System.out.println("tie");
+					if(r==0)
+					System.out.println("you won");
+					if(r==2)
+					System.out.println("you lost");
+					break;	
+			case 3:
+					if(r==2)
+					System.out.println("tie");
+					if(r==1)
+					System.out.println("you won");
+					if(r==0)
+					System.out.println("you lost");
+					break;
+			default:
+			System.out.println("plz select correct option");			
+		}
+	}
+}
